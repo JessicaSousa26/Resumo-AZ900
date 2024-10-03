@@ -82,11 +82,11 @@ Benefícios da segurança e da governnça na nuvem
 Benefícios da capacidade de gerenciamento na nuvem.
 
 **Links Úteis para Estudar**
+
 https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/2-high-availability-scalability-cloud 
 https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/3-reliability-predictability-cloud 
 https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/4-security-governance-cloud 
 https://learn.microsoft.com/training/modules/describe-benefits-use-cloud-services/5-manageability-cloud 
-![image](https://github.com/user-attachments/assets/6aa52de8-3ea1-4baa-8044-dcd2cbe8fc92)
 
 **Lição 3 - Criando Máquinas Virtuais na Azure**
 
@@ -107,7 +107,7 @@ Sempre trabalha com a possibilidade do recurso ficar indisponível.
 Sempre questionar o SLA que precisa entregar, pois, com base na sua solicitação vou criar nesta arquitetura é preciso ter definido o SLA desejado para desenhar as estruturas, comunicações, onde fica cada coisa.
 Teste pode ser 99%, menos recursos.
 99,99% saber os requisitos necessários.
-- 9 mais tempo indisponível vai ter, +9 menos tempo indiponível vai ter
+Quanto - 9 mais tempo indisponível vai ter, +9 menos tempo indiponível vai ter
 
 Ao clicar em um recurso tem um i ao lado das opções para esclarecimento.
 Também há o docs para saber mais.
@@ -116,12 +116,83 @@ Sempre entender o propósito real da criação do recurso, teste, produção, te
 A nuvem entrega isto, que tem os acordos de nível de serviço e dependendo da forma como crio minhas aplicações isto vai estar sendo disponibilizado. 
 O profissional para atender uma demanda deve questionar,  sempre deve ter algo a ser melhorado e quem solicita nem sempre sabe dessas opções. Não ser somente o robô que fecha ticket. 
 
+**Lição 4 - Tipos de Serviço de Nuvem**
 
+IaaS, PaaS, SaaS - Este conceito é geral de nuvem. Pode mudar os nomes e recursos de cada provider.
 
+**IaaS (Infraestrutura Como Serviço)** 
 
+![image](https://github.com/user-attachments/assets/a648fbae-4f58-46cb-916c-e39994162187)
 
+- serviços ou recursos onde tem mais acesso, envolvimento com configuração, monitoramento e backup se está funcionando ou não em contrapartida tem muito mais acesso ao recurso final. Ex: servidores e armazenamento, firewalls/segurança de rede, planta física/edifício do datacenter, backup.
 
+Ex: Cria a máquina com diversas configurações como assinatura, nome, backup, modelo de acesso, redes e depois que a máquina está ligada tem que ficar ligado nas atualizações, monitoramento, tem que verificar com frequência. As coisas não se resolvem sozinhas. Tem mais acesso no contexto de personalização do recurso, mais liberdade para trabalhar.
 
+- Crie uma infraestrutura de TI de pagamento conforme o uso alugando servidores, máquinas virtuais, armazenamento, redes e sistemas operacionais de um provedor de nuvem.
+
+- Criar na nuvem apenas não vai se preocupar com o gerenciamento físico, mas, as configurações são de responsabilidade da empresa.
+
+**Paas(Plataforma Como Serviço)**
+
+![image](https://github.com/user-attachments/assets/a204cbcd-5d4c-4ede-95c1-ea2df1feaa2b)
+
+- Envolve sistemas operacionais, ferramentas de desenvolvedores, base de dados.
+- Banco de Dados precisa de servidor performático, melhor tempo de resposta.
+Instalar e configurar o banco na nuvem e desenvolvedores acessar (Iaas)
+- A máquina não quero me envolver quero o banco solito, assim, sobre a hierarquia. Preocupado com a aplicação e vida que segue (Paas)
+
+- Fornece um ambiente para a criação, o teste e a implantação de aplicativos de software, sem focar no gerenciamento da infraestrutura subjacente.
+![image](https://github.com/user-attachments/assets/d58e8c52-a253-4192-9ed6-a32bed22e913)
+
+Se desprende da visão do sistema operacional, não é mais minha responsabilidade. Já fiz minha parte que é configuração. 1º acesso no sistema, 2º subiu nível da aplicação.
+
+**SaaS(Software Como Serviço)**
+
+![image](https://github.com/user-attachments/assets/d313d88f-7108-4098-8a2d-e701e3585d8e)
+
+Aplicativos e Apps instalados - Teams, Office 365
+- Teams é um das ferramentas que está disponível no 365 - quando realiza a configuração o que determina é a licença. Ex: 3 modelos de licnça de office 365, se tiver licença somente para o modelo A,  eu logo, crio a conta da organização, importo as contas dos meus colaboradores, crio meus grupos, encaminhamento e faço as regras. Tem acesso a menos botões, pois, está pagando mais barato. Ter acesso a rastreabilidade de e-mails, bloquear usuário, coisas mais a fundo é outra licença. Coisas completas é outra licença, o administrador faz o login no sistema e tem acesso a um painel completasso. O que determina quem ve o que é a tipo da licença, conforme faz o login personalizo para a organização. Subiu mais um nível no degrau se comparado a plataforma como serviço.
+- A aplicação já existe, já está pronta e já sabe o que entrega e o que vai determinar o que e como estou vendo é o modelo de licenciamento adquirido. 
+- Os usuários se conectam e usam aplicativos com base em nuvem pela Internet: por exemplo, Microsoft Office 365, email e calendários.
+_ Neste caso não importa o servidor, memória, espera que esteja funcionando bem para utilizar. Não é sua responsabilidade.Sua responsabilidade é fazer as configurações para os usuários. Sobe mais 1 nível, deixa de ser a configuração exaustiva, nível do Sistema Operacional e chega mais em outro nível onde os anteriores não são minha responsabilidade.
+
+Quanto mais utilizamos aplicações que são de Infraestrutura como serviço, mais isso vai nos demandar atividades, time vai trabalhar mais. Trabalhou para entregar e depois precisa monitorar, pois, muito mais coisas são responsabilidade em relação aos outros. Quando muda para plataforma como serviço isto já diminui bastante e o software como serviço nem se fala, com isto pode identificar melhor o modelo de adoção.
+
+**Modelo de Responsabilidade Compartilhada**
+
+![image](https://github.com/user-attachments/assets/ede375ba-a32b-4842-bbab-1d19509fcf81)
+
+Mentalizar a questão da responsabilidade
+Fisico (No local) - toda a responsabilidade é sua (estragou, não passou cabo, sem refrigerador) não terceiriza
+IaaS - azul claro responsabilidade da Microsoft (Datacenter físico, Rede física, Hosts Físicos) - tirando o que é físico o restante é responsabilidade do cliente que vai precisar configurar.
+
+PaaS - O sistema operacional é responsabilidade da Microsoft.
+Pode optar criar um banco de dados e fazer configurações, mas, não vai ter acesso a uma máquina e configurar o SO. 
+Controle compartilhado - Controles de rede (vnet, subnet, exposto na nuvem, balanceador de carga), aplicativos (libera a aplicação e vai configurar e alimentar com os dados) e Infraestrutura de identidade e diretório (oferece a gestão e preenche as lacunas). 
+
+SaaS - a partir daí contas e identidades, dispositivos (móveis e PCs) e Informações e dados são de responsabilidade do cliente. Consegue personalizar. Melhor olhar de cima para baixo para saber quem está excluindo. É o contrário do Iaas 3 responsabilidades empresa e Iaas 3 responsabilidades Microsoft.
+
+Conforme o nível de gestão vai estar ocupando a mente dos colaboradores se cria 2 mil máquinas virtuais tem que se preocupar com atualização, backup, patchs, problemas em relação a outras redes, como está chegando o encaminhamento de serviço, aplicações e tudo. Se olha para as contas da empresa e faz classificação, encaminhamento, grupos e etc, já está tudo pronto e precisa somente personalizar. O trabalho que vai ser demandado de um modelo para outro é bem diferente. Ter mais gestão deixa mais caro, por exemplo ter uma Iaas ela depende do sistema operacional e tudo que vem em decorrencia dele e se torna mais caro. São muitos detalhes para analisar.
+
+**Comparação do serviço de nuvem**
+
+![image](https://github.com/user-attachments/assets/c054f6f7-11ad-4148-97de-ae8f901cf3ae)
+
+**IaaS**
+- O serviço de nuvem mais flexível. (maiores poderes, configura, gerencia e personaliza o hardware para suas máquinas)
+- Você configura e gerencia o hardware para seu aplicativo.
+
+**PaaS**
+- Focado no desenvolvimento de aplicativos. (Sistema Operacional e outros/ Responsabilidade de Microsoft, o que sobra é responsabilidade da empresa).
+- O gerenciamento de plataforma é realizado pelo provedor de nuvem.
+
+**SaaS**
+-Modelo de preço de pagamento conforme o uso.(pagamento conforme o uso, licenciamento, 365,assinatura, menor controle menos acessos e opções e gestão do que importa).
+- Os usuários pagam pelo software que utilizam em um modelo de assinatura.
+
+Quando vai criar um novo recurso não aparece essas plataformas e deve consultar a documentação.
+
+Para a prova não esquecer o nível de gestão (Alto, médio e baixo), contexto para analisar as perguntas já da para entender.
 
 
 
